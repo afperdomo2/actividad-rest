@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=actividad-rest
+      - POSTGRES_USER=felipe
+      - POSTGRES_PASSWORD=123456
+    ports:
+      - 5433:5432
+    volumes:
+      - "~/postgres_data:/var/lib/postgresql/data"
